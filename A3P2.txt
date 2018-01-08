@@ -1,0 +1,61 @@
+Day 3 Assignment Question 2:
+
+Write C code that will display the calculator menu.
+The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input two integer vales for the calculation. See the sample below. 
+  MENU 
+          1. Add 
+          2. Subtract 
+          3. Multiply 
+          4. Divide 
+          5. Modulus 
+Enter your choice: 1 
+Enter your two numbers: 12 15 
+Result: 27 
+  
+Continue? y 
+  
+The program also asks the user to decide whether he/she wants to continue the operation. If he/she input ‘y’, the program will prompt the user to choose the operation gain. Instead, the program will terminate. 
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int c, a, b; float ans; char choice;
+    printf("Enter the first number.\n");
+    scanf("%d",&a);
+    printf("Enter the second number.\n");
+    scanf("%d",&b);
+    printf("Select operation: \n 1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Division\n 5. Modulus.\n");
+    scanf("%d",&c);
+    calc:
+    switch(c)
+    { case '1' :
+      ans = a + b;
+      printf("%.1f", ans);
+      
+      case '2' :
+      ans = a - b;
+      printf("%.1f", ans);
+      
+      case '3' :
+      ans = a * b;
+      printf("%.2f", ans);
+      
+      case '4' :
+      ans = a / b;
+      printf("%.4f", ans);
+      
+      case '5' :
+      ans = a % b;
+      printf("%.4f", ans);
+    }
+    printf("Do you want to continue?");
+    scanf("%c", &choice);
+    if (choice == 'y' || choice == 'Y')
+    {
+        goto calc;
+    }
+}
+

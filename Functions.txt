@@ -1,0 +1,73 @@
+2 times table using for, if , while , do-while loop functions.
+
+
+#include<stdio.h>
+int prodfor(int a, int b);
+int prodif(int a, int b);
+int prodw(int a, int b);
+int proddw(int a, int b);
+int main() 
+{
+ int x=1, y=2, p;
+ printf(" 2 times table using for loop\n");
+ p= prodfor(x,y);
+ printf("\n 2 times table using if loop\n");
+ p= prodif(x,y);
+ printf("\n 2 times table using while loop\n");
+ p= prodw(x,y);
+ printf("\n 2 times table using do while loop\n");
+ p=proddw(x,y);
+ return (0);
+} 
+ 
+ int prodfor(int a, int b)
+ {
+ int res;
+ b=2;
+ for(a=1;a<=10;a++)
+ {
+     res = a * b;
+     printf("%d ",res);
+ }
+ return res;
+ }
+ 
+ int prodif(int a, int b)
+ {
+ int res;
+ b=2;
+ a=0;
+ if(a<=10)
+ {
+     a = a + 1;
+     res = a * b;
+     printf("%d ", res);
+ }
+ return res;
+}
+ 
+ int prodw(int a, int b)
+ {
+  int res;
+  b=2;
+  while(a<=10)
+  {
+     res = a * b;
+     printf("%d ", res);
+     a = a + 1;
+  }
+  return res;
+ }
+ 
+ int proddw(int a, int b)
+ {
+  int res;
+  b=2;
+  do
+  {
+     res = a * b;
+     printf("%d ", res);
+     a = a + 1;
+  } while (a<=10);
+  
+ }

@@ -1,0 +1,16 @@
+Day 3 Assignment Question 7:
+
+
+C program to find largest number among 3 numbers using ternary operator
+
+#include<stdio.h>
+
+void main()
+{
+int a, b, c, large;
+clrscr();
+printf("Enter any three number: ");
+scanf("%d%d%d",&a,&b,&c);
+large=a>b ? (a>c?a:c) : (b>c?b:c);
+printf("Largest Number is: %d",large);
+}
